@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="assets/index-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')" data-lang-fr="Accueil" data-lang-en="Home">Accueil</a></li>
+                <li><a href="#" onclick="showPage('about')" data-lang-fr="À propos" data-lang-en="About">À propos</a></li>
+                <li><a href="#" onclick="showPage('projects')" data-lang-fr="Projets" data-lang-en="Projects">Projets</a></li>
+                <li><a href="#" onclick="showPage('contact')" data-lang-fr="Contact" data-lang-en="Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <img src="Images/france.png" alt="Langue" id="language-flag" onclick="toggleLanguage()" style="cursor: pointer;">
+        </div>
+    </header>    
+    <main>
+        <section id="home" class="page active">
+            <h1 class="welcome" data-lang-fr="Bienvenue sur mon portfolio !!!" data-lang-en="Welcome to my portfolio !!!">Bienvenue sur mon portfolio !!!</h1>
+            <h1 class="name" >CLÉMENT GOUILLOUD</h1>
+            <h1 class="title" data-lang-fr="Étudiant au département science du numérique à l'ENSEEIHT" data-lang-en="Student in the digital science department at ENSEEIHT">Étudiant au département science du numérique à l'ENSEEIHT</h1>
+        </section>
+        <section id="about" class="page">
+            <h1>À propos de moi</h1>
+            <br>
+            <div class="about-container">
+                <p class = "resume" >Je suis étudiant en 3ème année a l'ENSEEIHT dans le département Science du numérique.</p>
+                <h2>Expérience</h2>
+                <div class="experience">
+                    <div class="experience-header">
+                        <div>
+                            <img src="Images/logoOrange.png" alt="Logo de l'Entreprise">
+                            <h3>Ingénieur études</h3>
+                        </div>
+                        <span>Mars 2024 - Sept. 2024</span>
+                    </div>
+                    <div class="experience-description">
+                        <p>Construction de graphes de connaissance pour l'analyse d'évènements sur le cœur mobile 5G. Travail avec les technologie du web sémantique avec les Ontologies.</p>
+                    </div>
+                    <div class="experience-skills">
+                        <span>Base Graphe</span>
+                        <span>Ontologies</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+                
+                <div class="experience">
+                    <div class="experience-header">
+                        <div>
+                            <img src="Images/LogoCegelecMobility.jpg" alt="Logo de l'Entreprise">
+                            <h3>Ingénieur études</h3>
+                        </div>
+                        <span>Juil. 2023 - Sept. 2023</span>
+                    </div>
+                    <div class="experience-description">
+                        <p>Participation au développement d’un système de régulation de vitesse et de signalisation de danger. Développement de fonctionalités à partir du progiciel "Ignition".</p>
+                    </div>
+                    <div class="experience-skills">
+                        <span>Ignition</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+
+                <h2>Compétences</h2>
+                <ul>
+                    <li><strong>Langages de programmation :</strong> Python, Java, SQL, C</li>
+                    <li><strong>Développement Web :</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Gestion de bases de données :</strong> MySQL, MariaDB, Neo4j (Base de graphes)</li>
+                    <li><strong>Outils et technologies :</strong> Git, GitLab, Android Studio, Unity, Unreal Engine 5</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="projects" class="page">
+            <div class="projects-container">
+                <h1>Mes projets : </h1>
+                <div class="cards-container">
+                    <div class="card" onclick="openModal('modal1')">
+                        <img src="Images/ImageProjet1.jpg" alt="Description de l'image">
+                        <h3>MeteorShooter</h3>
+                        <p>Production d'un jeu MeteorShooter un "shoot them up" dont le but est d'incarner un vaisseau, d'esquiver les météorites et tirer sur les vaisseaux ennemis.</p>
+                    </div>
+                    <div class="card" onclick="openModal('modal2')">
+                        <img src="Images/ImageProjet1.jpg" alt="Description de l'image">
+                        <h3>Space Survivor</h3>
+                        <p>Production d'un jeu Android en 2D. Développement front-end et back-end. Utilisation de Maria DB, Android Studio, REST API et Unity.</p>
+                    </div>
+                    <div class="card" onclick="openModal('modal3')">
+                        <img src="Images/ImageProjet1.jpg" alt="Description de l'image">
+                        <h3>Knight Fight</h3>
+                        <p>Production d'un jeu en 3D avec Unreal Engine 5.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="contact-form">
+                <h1>N'hésitez pas à me contacter !!!</h1>
+                <br>
+                <form action="mailto:clement.gouilloud@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <br>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        </section>
+
+        <!-- Modale pour Projet 1 -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h1>Meteor Shooteur</h1>
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/Xq4u5wVU49U" frameborder="0" allowfullscreen></iframe>
+                <h2>Description du projet : </h2>
+                <p>Production d'un jeu MeteorShooter un "shoot them up" dont le but est d'incarner un vaisseau, d'esquiver les météorites et tirer sur les vaisseaux ennemis.</p>
+                <h2>Technologies utilisées :</h2>
+                <div class="experience-skills">
+                    <span>Java</span>
+                    <span>JavaFx</span>
+                    <span>Technologie 3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modale pour Projet 2 -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h1>Space Survivor</h1>  
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/Xq4u5wVU49U" frameborder="0" allowfullscreen></iframe>
+                <h2>Description du projet : </h2>
+                <p>Production d'un jeu Android en 2D. Développement front-end et back-end.</p>
+                <h2>Technologies utilisées :</h2>
+                <div class="experience-skills">
+                    <span>Java</span>
+                    <span>REST API</span>
+                    <span>Android Studio</span>
+                    <span>Unity</span>
+                    <span>MariaDB</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modale pour Projet 3 -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h1>Knight Fight</h1>
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/Xq4u5wVU49U" frameborder="0" allowfullscreen></iframe>
+                <h2>Description du projet : </h2>
+                <p>Production d'un jeu en 3D avec Unreal Engine 5.</p>
+                <h2>Technologies utilisées :</h2>
+                <div class="experience-skills">
+                    <span>Unreal Engine 5</span>
+                    <span>C++</span>
+                    <span>Blueprints</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024. Made by Clément Gouilloud.</p>
+        <ul class="social-links">
+            <li>
+                <a href="https://www.linkedin.com/in/clement-gouilloud-8a6225221/?originalSubdomain=fr" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+            </li>
+            <li>
+                <a href="l
+                https://github.com/ClemGouil" target="_blank">
+                    <img src="images/github.png" alt="GitHub" class="social-icon">
+                </a>
+            </li>
+            <li>
+                <a href="mailto:clement.gouilloud@gmail.com">
+                    <img src="images/mail.png" alt="Email" class="social-icon">
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="assets/index-script.js"></script>
+</body>
+</html>
