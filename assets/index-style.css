@@ -268,7 +268,7 @@ footer {
 }
 
 .education-item {
-  border: 1px solid #ddd; /* Bordure légère pour délimiter chaque élément */
+  border: 1px solid #888;
   border-radius: 8px; /* Coins arrondis */
   padding: 15px; /* Espacement interne */
   margin-bottom: 15px; /* Espacement entre les éléments */
