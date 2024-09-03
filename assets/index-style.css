@@ -262,34 +262,59 @@ footer {
   cursor: pointer;
 }
 
-/* Style général pour la section Éducation */
-#about .education {
-  margin: 20px 0;
+/* Éducation */
+
+.education {
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.education-header img {
+  height: 40px;
+  margin-right: 10px;
+  border: 1px solid #888; /* Bordure pour les logos */
+  border-radius: 5px; /* Coins arrondis pour les logos */
+}
+
+.education-header div {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.education-header h4 {
+  margin: 0;
+  font-size: 1em;
+  color: #666; /* Couleur plus douce pour les sous-titres */
+}
+
+.education-header span {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #a0a0a0;
 }
 
 .education-item {
-  border: 1px solid #888;
-  border-radius: 8px; /* Coins arrondis */
-  padding: 15px; /* Espacement interne */
-  margin-bottom: 15px; /* Espacement entre les éléments */
+  margin-bottom: 20px;
 }
 
-.education-item h3 {
-  font-size: 1.2em; /* Taille de police pour le titre */
-  margin: 0 0 5px 0; /* Espacement inférieur */
-  color: #333; /* Couleur du texte */
-}
-
-.education-item h4 {
-  font-size: 1em; /* Taille de police pour le sous-titre */
-  margin: 0 0 10px 0; /* Espacement inférieur */
-  color: #666; /* Couleur du texte */
-}
-
-.education-item span {
-  display: block; /* Affichage en bloc pour que la date occupe toute la largeur */
-  font-size: 0.9em; /* Taille de police pour la date */
-  color: #999; /* Couleur du texte pour la date */
+.education-description {
+  margin-top: 10px;
 }
 
 /* Experience  */
