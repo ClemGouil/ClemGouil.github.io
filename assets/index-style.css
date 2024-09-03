@@ -280,11 +280,11 @@ footer {
   justify-content: space-between;
 }
 
-.education-header img {
+.education-logo {
   height: 40px;
   margin-right: 10px;
-  border: 1px solid #888; /* Bordure pour les logos */
-  border-radius: 5px; /* Coins arrondis pour les logos */
+  border: none; /* Supprime la bordure autour du logo */
+  border-radius: 0; /* Supprime les coins arrondis du logo */
 }
 
 .education-header div {
