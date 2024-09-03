@@ -277,7 +277,7 @@ footer {
 
 .education-header {
   display: flex;
-  align-items: flex-start; /* Aligne les éléments en haut */
+  align-items: center; /* Aligne les éléments en haut */
   margin-bottom: 10px; /* Espacement entre le logo et le texte */
 }
 
